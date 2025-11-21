@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection"
 import ProjectSection from "./components/ProjectSection"
 import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
+import BackToTop from "./components/BackToTop"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <ProjectSection />
       <ContactSection />
       <Footer />
+      <BackToTop />
     </>
   )
 }
