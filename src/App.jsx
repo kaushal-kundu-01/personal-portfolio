@@ -3,6 +3,7 @@ import HomeSection from "./components/HomeSection"
 import AboutSection from "./components/AboutSection"
 import ProjectSection from "./components/ProjectSection"
 import ContactSection from "./components/ContactSection"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <AboutSection />
       <ProjectSection />
       <ContactSection />
+      <Footer />
     </>
   )
 }
