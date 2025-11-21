@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import HomeSection from "./components/HomeSection"
 import AboutSection from "./components/AboutSection"
+import ProjectSection from "./components/ProjectSection"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <HomeSection />
       <AboutSection />
+      <ProjectSection />
     </>
   )
 }

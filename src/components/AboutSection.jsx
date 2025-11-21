@@ -33,7 +33,7 @@ function AboutSection() {
                                 <span>React</span>
                             </div>
                             <div className="skill-item">
-                                <i class="fa-brands fa-java"></i>
+                                <i className="fa-brands fa-java"></i>
                                 <span>Java</span>
                             </div>
                             <div className="skill-item">
