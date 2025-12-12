@@ -4,10 +4,25 @@ import "../styles/Navbar.css";
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 100);
+
+            const sections = document.querySelectorAll(".section");
+            let current = "home";
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.clientHeight;
+
+                if (window.scrollY >= top - 200) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            setActiveSection(current);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -21,16 +36,43 @@ function Navbar() {
 
                 <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-link" onClick={() => setMenuOpen(false)}>Home</a>
+                        <a
+                            href="#home"
+                            className={`nav-link ${activeSection === "home" ? "active" : ""}`}
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Home
+                        </a>
                     </li>
+
                     <li className="nav-item">
-                        <a href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>About</a>
+                        <a
+                            href="#about"
+                            className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            About
+                        </a>
                     </li>
+
                     <li className="nav-item">
-                        <a href="#projects" className="nav-link" onClick={() => setMenuOpen(false)}>Projects</a>
+                        <a
+                            href="#projects"
+                            className={`nav-link ${activeSection === "projects" ? "active" : ""}`}
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Projects
+                        </a>
                     </li>
+
                     <li className="nav-item">
-                        <a href="#contact" className="nav-link" onClick={() => setMenuOpen(false)}>Contact</a>
+                        <a
+                            href="#contact"
+                            className={`nav-link ${activeSection === "contact" ? "active" : ""}`}
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Contact
+                        </a>
                     </li>
                 </ul>
 
