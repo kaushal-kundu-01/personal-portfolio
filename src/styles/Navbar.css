@@ -10,6 +10,12 @@
     transition: all 0.3s ease;
 }
 
+.navbar.scrolled {
+    padding: 15px 0;
+    box-shadow: 0 2px 30px rgba(0, 240, 255, 0.2);
+}
+
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
