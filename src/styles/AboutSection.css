@@ -106,4 +106,12 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
 }

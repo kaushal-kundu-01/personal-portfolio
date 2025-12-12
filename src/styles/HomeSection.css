@@ -173,3 +173,13 @@
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+}
