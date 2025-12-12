@@ -152,3 +152,11 @@
     color: #ef4444;
     display: block;
 }
+
+@media (max-width: 768px) {
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

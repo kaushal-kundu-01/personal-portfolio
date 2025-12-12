@@ -112,3 +112,9 @@
     font-size: 0.8rem;
     color: var(--accent-cyan);
 }
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
